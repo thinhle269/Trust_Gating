@@ -26,14 +26,9 @@ results/raw/         504 cached runs, one JSON each
 
 ## Method
 
-The server computes three antecedents per client per round, none of them
-self-reported:
+ 
 
-| | quantity | why it resists gaming |
-|---|---|---|
-| `x1` | macro-F1 of the client's update on the server's small clean root set | measured against data the adversary cannot touch |
-| `x2` | directional similarity to the geometric-median consensus | cheap, but see the caveat below |
-| `x3` | cleanliness — update norm against the cohort median, in log space | inflation and shrinkage read as equally anomalous |
+ 
 
 An eight-rule ANFIS (3 inputs × 2 terms, grid partition) maps these to a trust
 value, and its premise and consequent parameters are updated online, so the rule
