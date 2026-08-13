@@ -9,8 +9,7 @@ allowed into the aggregate.
  
 
 ---
-
-## What is here
+ 
 
 ```
 config.py            datasets, run configuration, cache key, compute detection
