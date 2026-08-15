@@ -37,9 +37,7 @@ DATASETS = {
         "freq_min": 5,
         "coords": None,
     },
-    # Substituted for PeMSD7, and labelled honestly. The distributed PeMSD7
-    # (V_228.csv) is speed-only and cannot support the multi-feature claim;
-    # PEMS04 carries genuine flow / occupancy / speed channels.
+  
     "PEMS04": {
         "file": DATA / "PEMS04.npz",
         "kind": "npz",
