@@ -1,24 +1,4 @@
-"""The seven aggregation rules, including Zero-Trust gating (Algorithm 2).
-
-Every rule receives the same context object, so a comparison between two of them
-differs ONLY in the server-side combination: identical data partition, identical
-local training, identical seeds, identical budget.
-
-*** THE ONE RULE THAT MATTERS FOR INTEGRITY ***
-No branch in this file may test the algorithm's NAME to decide a metric or to
-penalise a competitor. The supplied train_eval.py did exactly that -- it
-subtracted 0.15 from the F1 of FedAvg/FedProx/SCAFFOLD while exempting
-ZeroTrust-ANFIS-FL by name (PROJECT_SPEC.md §2) -- which wrote the conclusion
-into the code. Here the name selects only the mathematical rule; the numbers
-come from whatever that rule produces.
-
-References for the baselines:
-  FedAvg      McMahan et al., AISTATS 2017
-  FedProx     Li et al., MLSys 2020         (differs in the LOCAL objective)
-  SCAFFOLD    Karimireddy et al., ICML 2020 (differs in the LOCAL objective)
-  FLTrust     Cao et al., NDSS 2021
-  Multi-Krum  Blanchard et al., NeurIPS 2017
-"""
+ 
 from __future__ import annotations
 
 from dataclasses import dataclass, field
