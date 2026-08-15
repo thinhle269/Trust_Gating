@@ -111,14 +111,7 @@ DEFAULT_DATA = DataConfig()
 
 # ---------------------------------------------------------------- compute
 def auto_workers(vram_per_worker_gb: float = 0.45, plateau: int = 12) -> int:
-    """Worker processes, decided from THIS machine at run time.
-
-    Bounded by free VRAM (each CUDA context costs ~0.3-0.45 GB before any
-    tensor), by logical CPUs (leaving two for the parent and the OS), and by an
-    empirical plateau: with a small model on a single GPU, throughput stops
-    improving around a dozen processes because the kernel launch queue, not the
-    SMs, becomes the bottleneck.
-    """
+    
     try:
         import torch
     except ImportError:
