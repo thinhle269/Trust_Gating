@@ -1,11 +1,9 @@
-"""Master pipeline: verify -> train -> export tables -> export figures.
+ 
 
     python run_all.py                      # full study, 6 seeds, 40 rounds
     python run_all.py --seeds 3            # quicker pass
     python run_all.py --skip-train         # regenerate outputs from cached runs
-
-Runs are cached per configuration under results/raw/, so an interrupted study
-resumes without recomputing anything.
+ thout recomputing anything.
 """
 from __future__ import annotations
 
