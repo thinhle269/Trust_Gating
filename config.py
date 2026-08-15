@@ -1,14 +1,4 @@
-"""Global configuration for ZeroTrust-ANFIS-FL.
-
-Run once at the start:  python config.py
-That verifies the environment, locates every dataset, auto-detects the compute
-plan for THIS machine, and writes results/environment.json.
-
-Every value that changes a number lives here, and RunConfig.key() hashes all of
-them into the experiment cache key. A field that changed results but was missing
-from the key would let a later sweep silently reload numbers computed under
-different settings.
-"""
+ 
 from __future__ import annotations
 
 import hashlib
@@ -29,9 +19,7 @@ EXCEL = RESULTS / "excel"
 for _d in (RESULTS, RAW, CSV, FIGS, EXCEL):
     _d.mkdir(parents=True, exist_ok=True)
 
-# ---------------------------------------------------------------- datasets
-# Only real files. Each entry records the loader kind so datasets.py never has
-# to guess a format.
+ 
 DATASETS = {
     "METR-LA": {
         "file": DATA / "metr_la.h5",
